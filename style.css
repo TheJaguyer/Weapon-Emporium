@@ -1,0 +1,103 @@
+/* ==================== Colors ==================== */
+
+:root {
+  --navy: #161d28;
+  --white: #e5e5e5;
+  --gold: #b38650;
+}
+
+/* ==================== Constant Elements ==================== */
+
+#wrapper {
+  background-color: var(--navy);
+
+  font-family: monospace;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#destiny-logo {
+  width: 80vw;
+  aspect-ratio: 1000/322;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+#title-box {
+  color: var(--white);
+
+  margin-top: 1rem;
+
+  height: max-content;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+#title-small {
+  font-size: 1.5rem;
+}
+
+#title-big {
+  font-size: 4rem;
+}
+
+#results-row {
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.result-container {
+  background-color: var(--white);
+  border: 2px solid var(--gold);
+  border-radius: 1rem;
+  color: var(--navy);
+  max-width: 100px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  width: max-content;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.result-icon {
+  border-radius: 0.5rem;
+  border: 2px solid var(--gold);
+}
+
+#search-input {
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 2px solid var(--gold);
+  color: var(--navy);
+}
+
+#search-button {
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 2px solid var(--gold);
+  color: var(--navy);
+}
