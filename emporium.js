@@ -19,11 +19,6 @@ function $searchByName(string, callBack) {
   }).done(callBack);
 }
 
-function getDisplayProperties(data) {
-  console.log(data.Response.displayProperties);
-  // return data.Response.displayProperties;
-}
-
 function $getDefinitions(hash, definition, callBack) {
   $.ajax({
     url: 'https://www.bungie.net/Platform/Destiny2/Manifest/' + definition + '/' + hash + '/',
@@ -33,6 +28,11 @@ function $getDefinitions(hash, definition, callBack) {
       'X-API-Key': '098f5304c5214bd9a15ce721723bef0a',
     },
   }).done(callBack);
+}
+
+function getDisplayProperties(data) {
+  console.log(data.Response.displayProperties);
+  // return data.Response.displayProperties;
 }
 
 function getResultsList(data) {
@@ -100,7 +100,7 @@ function selectResult() {
 
 /* ==================== Listeners ==================== */
 
-$weaponCard.hide();
+$weaponCard.hide(); // Just so when the page loads, there is no empty div
 
 $searchButton.on('click', function () {
   let input = $searchInput.val();
@@ -154,7 +154,7 @@ $searchButton.on('click', function () {
 
 /* ==================== Example Get Response ==================== */
 
-let hashCall = {
+let responseExample = {
   Response: {
     displayProperties: {
       description: '',
