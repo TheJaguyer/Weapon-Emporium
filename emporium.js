@@ -6,46 +6,6 @@ const $searchButton = $('#search-button');
 const $resultsRow = $('#results-row');
 const $weaponCard = $('#selection-container');
 
-/*
-Searches and definitions
-
-- Search All Items by Name: 
-  'https://www.bungie.net/Platform/Destiny2/Armory/Search/DestinyInventoryItemDefinition/' + string + '/?page=0'
-                                                         ^ Definition                       ^ Search String
-
-- One Weapon by Hash:
-  'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyInventoryItemDefinition/' + hash + '/'
-                                                     ^ Defintion                        ^ Hash
-
-- List of Plug Sets:
-  'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyPlugSetDefinition/' + hash + '/'
-                                                     ^ Defintion                  ^ Hash
-
-- Single Plug Definition:
-  'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyInventoryItemDefinition/' + hash + '/'
-                                                     ^ Defintion                  ^ Hash
-- Stat Definition:
-  'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyStatDefinition/' + hash + '/'
-                                                     ^ Defintion                  ^ Hash
-
-- Stat Hashes and Names
-        155624089: stability
-        943549884: handling
-        1240592695: range
-        1345609583: aim assistance
-        1480404414: attack
-        1885944937: no name
-        1931675084: inventory size
-        1935470627: power
-        2714457168: airborne effectiveness
-        2715839340: recoil direction
-        3555269338: zoom
-        3871231066: magazine
-        4043523819: impact
-        4188031367: reload speed
-        4284893193: rounds per minute
-*/
-
 /* ==================== Functions ==================== */
 
 function $searchByName(string, callBack) {
@@ -151,6 +111,46 @@ $searchButton.on('click', function () {
 
 /* ==================== Notes ==================== */
 // This code honestly barely does anything besides parse through some thicc API calls. It would require many more calls to get stat data and slot data.
+
+/*
+  Searches and definitions
+  
+  - Search All Items by Name: 
+    'https://www.bungie.net/Platform/Destiny2/Armory/Search/DestinyInventoryItemDefinition/' + string + '/?page=0'
+                                                           ^ Definition                       ^ Search String
+  
+  - One Weapon by Hash:
+    'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyInventoryItemDefinition/' + hash + '/'
+                                                       ^ Defintion                        ^ Hash
+  
+  - List of Plug Sets:
+    'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyPlugSetDefinition/' + hash + '/'
+                                                       ^ Defintion                  ^ Hash
+  
+  - Single Plug Definition:
+    'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyInventoryItemDefinition/' + hash + '/'
+                                                       ^ Defintion                  ^ Hash
+  - Stat Definition:
+    'https://www.bungie.net/Platform/Destiny2/Manifest/DestinyStatDefinition/' + hash + '/'
+                                                       ^ Defintion                  ^ Hash
+  
+  - Stat Hashes and Names
+          155624089: stability
+          943549884: handling
+          1240592695: range
+          1345609583: aim assistance
+          1480404414: attack
+          1885944937: no name
+          1931675084: inventory size
+          1935470627: power
+          2714457168: airborne effectiveness
+          2715839340: recoil direction
+          3555269338: zoom
+          3871231066: magazine
+          4043523819: impact
+          4188031367: reload speed
+          4284893193: rounds per minute
+  */
 
 /* ==================== Example Get Response ==================== */
 
