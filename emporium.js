@@ -1,4 +1,4 @@
-/* ==================== Elements ==================== */
+/* ==================== Globals ==================== */
 
 const $body = $('#wrapper');
 const $searchInput = $('#search-input');
@@ -133,6 +133,8 @@ function generateItemData(data) {
 function selectResult() {
   let hash = $(this).attr('data--hash');
   let definition = 'DestinyInventoryItemDefinition';
+  $resultsRow.empty();
+  $weaponCard.empty();
   $getDefinitions(hash, definition, generateSelectionCard);
 }
 
