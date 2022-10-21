@@ -88,7 +88,6 @@ function getResultsList(data) {
 }
 
 function generateSearchResultCard(result) {
-  console.log(JSON.stringify(re));
   let $resultContainer = $('<div class="result-container"></div>');
   let $resultIcon = $('<img src="" class="result-icon" alt="No Image" />');
   let $resultName = $('<div class="result-name"></div>');
