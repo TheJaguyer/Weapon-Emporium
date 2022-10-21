@@ -101,7 +101,6 @@ function generateSearchResultCard(result) {
 }
 
 function generateSelectionCard(data) {
-  console.log(JSON.stringify(data));
   let $selectionIcon = $('<img src="" class="result-icon" alt="No Image" />');
   $selectionIcon.attr('src', 'https://www.bungie.net' + data.Response.displayProperties.icon);
   let $selectionName = $('<div class="result-name"></div>');
