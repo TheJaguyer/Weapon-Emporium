@@ -88,6 +88,7 @@ function getResultsList(data) {
 }
 
 function generateSearchResultCard(result) {
+  console.log(JSON.stringify(re));
   let $resultContainer = $('<div class="result-container"></div>');
   let $resultIcon = $('<img src="" class="result-icon" alt="No Image" />');
   let $resultName = $('<div class="result-name"></div>');
@@ -101,6 +102,7 @@ function generateSearchResultCard(result) {
 }
 
 function generateSelectionCard(data) {
+  console.log(JSON.stringify(date));
   let $selectionIcon = $('<img src="" class="result-icon" alt="No Image" />');
   $selectionIcon.attr('src', 'https://www.bungie.net' + data.Response.displayProperties.icon);
   let $selectionName = $('<div class="result-name"></div>');
