@@ -30,6 +30,21 @@ function $getDefinitions(hash, definition, callBack) {
   }).done(callBack);
 }
 
+function $getManifest() {
+  $.ajax({
+    url: 'https://www.bungie.net/Platform/Destiny2/Manifest/',
+    method: 'GET',
+    timeout: 0,
+    headers: {
+      'X-API-Key': '098f5304c5214bd9a15ce721723bef0a',
+    },
+  }).done((data) => {
+    console.log(data);
+  });
+}
+
+$getManifest();
+
 function getDisplayProperties(data) {
   console.log(data.Response.displayProperties);
   // return data.Response.displayProperties;
